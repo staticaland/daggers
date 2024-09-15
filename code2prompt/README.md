@@ -1,5 +1,7 @@
 # code2prompt
 
+Dagger module for [`code2prompt`](https://github.com/mufeedvh/code2prompt).
+
 ## Examples
 
 Run on a local directory:
