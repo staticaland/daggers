@@ -19,7 +19,7 @@ dagger call run --source=".." --include="*.go" --ignore="vendor/*" --output="out
 Run on a remote repository:
 
 ```sh
-dagger call run --remote="https://github.com/example/repo.git" --output="repo_packed.zip"
+dagger call run --remote="https://github.com/renovatebot/renovate" --path="docs/usage"
 ```
 
 Initialize a new configuration file:
