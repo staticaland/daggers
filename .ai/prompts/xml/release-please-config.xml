@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Task>
+  <Purpose>
+    Generate Release Please configuration file for a multi-component repository (monorepo).
+  </Purpose>
+  <Input>
+    <Component>llm</Component>
+    <Component>code2prompt</Component>
+    <Component>filestoprompt</Component>
+    <Component>repopack</Component>
+  </Input>
+  <Instructions><![CDATA[
+  1. Review the <Task> and <Input> tags in the provided XML:
+     - Understand the purpose from the <Purpose> tag.
+     - Identify the components listed in the <Component> tags under <Input>.
+  
+  2. Create one configuration file:
+     - release-please-config.json
+  
+  3. For release-please-config.json:
+     - Use the structure provided in the <Example>/<Output> section.
+     - Keep the "release-type", "include-component-in-tag", and "changelog-sections" as shown in the example.
+     - Create a "packages" object:
+       - Use each <Component> path as a key.
+       - For each component, create a "component" field using only the name of the last directory in the path.
+  ]]></Instructions>
+  <Example>
+    <Input>
+      <Component>backend/api</Component>
+      <Component>frontend/web-app</Component>
+      <Component>shared/utils</Component>
+      <Component>tools/cli</Component>
+    </Input>
+    <Output>
+      <Artifact name="release-please-config.json"><![CDATA[
+{
+  "release-type": "simple",
+  "include-component-in-tag": true,
+  "changelog-sections": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug fixes" },
+    { "type": "deps", "section": "Dependency updates" }
+  ],
+  "packages": {
+    "backend/api": {
+      "component": "api"
+    },
+    "frontend/web-app": {
+      "component": "web-app"
+    },
+    "shared/utils": {
+      "component": "utils"
+    },
+    "tools/cli": {
+      "component": "cli"
+    }
+  }
+}
+        ]]></Artifact>
+    </Output>
+  </Example>
+</Task>

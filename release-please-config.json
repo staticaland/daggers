@@ -1,0 +1,23 @@
+{
+  "release-type": "simple",
+  "include-component-in-tag": true,
+  "changelog-sections": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug fixes" },
+    { "type": "deps", "section": "Dependency updates" }
+  ],
+  "packages": {
+    "llm": {
+      "component": "llm"
+    },
+    "code2prompt": {
+      "component": "code2prompt"
+    },
+    "filestoprompt": {
+      "component": "filestoprompt"
+    },
+    "repopack": {
+      "component": "repopack"
+    }
+  }
+}
