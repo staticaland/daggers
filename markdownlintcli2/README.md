@@ -8,6 +8,7 @@ Run on a local directory:
 
 ```sh
 dagger call run --source=".." --globs="."
+```
 
 Run on a GitHub repository:
 
