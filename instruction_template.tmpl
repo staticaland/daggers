@@ -1,0 +1,6 @@
+{{- $sourceFile := "llm/main.go" -}}
+{{- $targetFile := "markdownlint2cli/main.go" -}}
+{{- $dockerImage := "davidanson/markdownlint-cli2:latest" -}}
+{{- $cliName := "markdownlint-cli2" -}}
+
+Modify the file `{{ $targetFile }}` to mirror the patterns found in `{{ $sourceFile }}`. Use `{{ $dockerImage }}` as the Docker image. Ensure that the structure and logic in `{{ $targetFile }}` closely follow the patterns established in `{{ $sourceFile }}`, adapting them as necessary for the {{ $cliName }} context. When referencing the Docker image in your code, use the exact string "{{ $dockerImage }}".
