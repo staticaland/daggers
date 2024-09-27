@@ -14,11 +14,11 @@ TEMP_FILE=$(mktemp)
 
 # Run gomplate with environment variables and save to temp file
 gomplate -f - > "$TEMP_FILE" << EOF
-{{- \$sourceFile := env.Getenv "SOURCE_FILE" | default "llm/main.go" -}}
-{{- \$targetFile := env.Getenv "TARGET_FILE" | default "markdownlint2cli/main.go" -}}
-{{- \$dockerImage := env.Getenv "DOCKER_IMAGE" | default "davidanson/markdownlint-cli2:latest" -}}
-{{- \$cliName := env.Getenv "CLI_NAME" | default "markdownlint-cli2" -}}
-{{- \$usageFile := env.Getenv "USAGE_FILE" | default "USAGE.md" -}}
+{{- \$sourceFile := env.Getenv "SOURCE_FILE" -}}
+{{- \$targetFile := env.Getenv "TARGET_FILE" -}}
+{{- \$dockerImage := env.Getenv "DOCKER_IMAGE" -}}
+{{- \$cliName := env.Getenv "CLI_NAME" -}}
+{{- \$usageFile := env.Getenv "USAGE_FILE" -}}
 
 Modify the file \`{{ \$targetFile }}\` to mirror the patterns found in \`{{ \$sourceFile }}\`. Use \`{{ \$dockerImage }}\` as the Docker image. Ensure that the structure and logic in \`{{ \$targetFile }}\` closely follow the patterns established in \`{{ \$sourceFile }}\`, adapting them as necessary for the {{ \$cliName }} context. When referencing the Docker image in your code, use the exact string "{{ \$dockerImage }}". Review the contents of \`{{ \$usageFile }}\` to ensure that the implementation in \`{{ \$targetFile }}\` accurately reflects the documented CLI usage and functionality of {{ \$cliName }}.
 EOF
