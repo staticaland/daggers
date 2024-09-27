@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Set default values if environment variables are not set
+# What to mirror to create the new thing
 SOURCE_FILE=${SOURCE_FILE:-"llm/main.go"}
+
+# The new thing we are creating
 CLI_NAME=${CLI_NAME:-"markdownlint-cli2"}
 TARGET_FILE=${TARGET_FILE:-"markdownlint2cli/main.go"}
 USAGE_FILE=${USAGE_FILE:-"markdownlint2cli/USAGE.md"}
