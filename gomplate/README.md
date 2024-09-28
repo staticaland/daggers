@@ -1,12 +1,14 @@
 # gomplate
 
+Dagger module for [`gomplate`](https://github.com/hairyhenderson/gomplate).
+
 ## Examples
 
 ```sh
 dagger call run --source="." --file=".aider_instructions.tmpl"
 ```
 
-This command will process the `.aider_instructions.tmpl` file in the current directory using gomplate and output the result to stdout.
+This command will process the `.aider_instructions.tmpl` file in the current directory using `gomplate` and output the result to stdout.
 
 ## Parameters
 
