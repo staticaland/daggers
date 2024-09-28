@@ -12,7 +12,6 @@ package main
 import (
 	"context"
 	"dagger/gomplate/internal/dagger"
-	"fmt"
 )
 
 type Gomplate struct{}
@@ -30,15 +29,9 @@ func (m *Gomplate) Run(
 
 	args := []string{"gomplate", "--file", file}
 
-	result := container.
+	return container.
 		WithDirectory("/src", source).
 		WithWorkdir("/src").
-		WithExec(args)
-
-	output, err := result.Stdout(ctx)
-	if err != nil {
-		return "", fmt.Errorf("failed to execute gomplate: %w", err)
-	}
-
-	return output, nil
+		WithExec(args).
+		Stdout(ctx)
 }
