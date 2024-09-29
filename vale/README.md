@@ -1,6 +1,6 @@
 # Vale
 
-Dagger module for [`vale`](https://github.com/mufeedvh/repopack).
+Dagger module for [`vale`](https://vale.sh/).
 
 ## Examples
 
