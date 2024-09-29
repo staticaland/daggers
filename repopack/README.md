@@ -1,6 +1,6 @@
 # repopack
 
-Dagger module for [`repopack`](https://github.com/mufeedvh/repopack).
+Dagger module for [`repopack`](https://github.com/yamadashy/repopack).
 
 ## Examples
 
