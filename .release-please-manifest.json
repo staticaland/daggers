@@ -1,10 +1,10 @@
 {
-  "llm": "0.0.1",
-  "code2prompt": "0.0.1",
-  "filestoprompt": "0.0.1",
-  "repopack": "0.0.1",
+  "llm": "0.1.0",
+  "code2prompt": "0.1.0",
+  "filestoprompt": "0.1.0",
+  "repopack": "0.1.0",
   "fabric": "0.0.1",
-  "vale": "0.0.1",
-  "markdownlintcli2": "0.0.1",
-  "gomplate": "0.0.1"
+  "vale": "0.1.0",
+  "markdownlintcli2": "0.1.0",
+  "gomplate": "0.1.0"
 }
