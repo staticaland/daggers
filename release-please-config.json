@@ -16,6 +16,18 @@
     "filestoprompt": {
       "component": "filestoprompt"
     },
+    "fabric": {
+      "component": "fabric"
+    },
+    "gomplate": {
+      "component": "gomplate"
+    },
+    "markdownlintcli2": {
+      "component": "markdownlintcli2"
+    },
+    "vale": {
+      "component": "vale"
+    },
     "repopack": {
       "component": "repopack"
     }
