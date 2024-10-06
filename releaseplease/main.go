@@ -18,6 +18,7 @@ import (
 	"context"
 	"dagger/releaseplease/internal/dagger"
 	"log"
+	"time"
 )
 
 type Releaseplease struct{}
@@ -64,6 +65,7 @@ func (m *Releaseplease) Pr(
 	}
 
 	container = container.WithSecretVariable("GITHUB_TOKEN", token).
+		WithEnvVariable("CACHEBUSTER", time.Now().String()).
 		WithExec([]string{"release-please", "release-pr", "--repo-url", repo, "--token", t})
 
 	return container
@@ -87,6 +89,7 @@ func (m *Releaseplease) Release(
 	}
 
 	container = container.WithSecretVariable("GITHUB_TOKEN", token).
+		WithEnvVariable("CACHEBUSTER", time.Now().String()).
 		WithExec([]string{"release-please", "github-release", "--repo-url", repo, "--token", t})
 
 	return container
