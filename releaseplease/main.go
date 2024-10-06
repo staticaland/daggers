@@ -38,7 +38,9 @@ type Releaseplease struct{}
 //   --token=$GITHUB_TOKEN
 //   --repo-url=<owner>/<repo> [extra options]
 
-// Returns a container that echoes whatever string argument is provided
+// See https://github.com/dagger/dagger/pull/8468
+
+// Install the release-please CLI tool
 func (m *Releaseplease) Install() *dagger.Container {
 
 	container := dag.Container().
@@ -48,6 +50,7 @@ func (m *Releaseplease) Install() *dagger.Container {
 	return container
 }
 
+// Run the release-please CLI tool with the release-pr command
 func (m *Releaseplease) Pr(
 	ctx context.Context,
 	// GitHub token with repo write permissions
@@ -71,6 +74,7 @@ func (m *Releaseplease) Pr(
 	return container
 }
 
+// Run the release-please CLI tool with the github-release command
 func (m *Releaseplease) Release(
 	ctx context.Context,
 	// GitHub token with repo write permissions
