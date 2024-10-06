@@ -3,9 +3,9 @@
   "code2prompt": "0.1.0",
   "filestoprompt": "0.1.0",
   "repopack": "0.1.0",
-  "fabric": "0.0.1",
+  "fabric": "0.1.0",
   "vale": "0.1.0",
   "markdownlintcli2": "0.1.0",
   "gomplate": "0.1.0",
-  "releaseplease": "0.0.1"
+  "releaseplease": "0.1.0"
 }
