@@ -30,6 +30,9 @@
     },
     "repopack": {
       "component": "repopack"
+    },
+    "releaseplease": {
+      "component": "releaseplease"
     }
   }
 }

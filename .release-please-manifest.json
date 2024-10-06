@@ -6,5 +6,6 @@
   "fabric": "0.0.1",
   "vale": "0.1.0",
   "markdownlintcli2": "0.1.0",
-  "gomplate": "0.1.0"
+  "gomplate": "0.1.0",
+  "releaseplease": "0.0.1"
 }
