@@ -10,6 +10,12 @@ Run on a local directory:
 dagger call run --source=".."
 ```
 
+Run on a remote source and on a remote module:
+
+```sh
+dagger call --mod 'github.com/staticaland/daggers/repopack' run --source='https://github.com/renovatebot/renovate.git' --path='docs/usage'
+```
+
 Run with include and ignore patterns:
 
 ```sh
